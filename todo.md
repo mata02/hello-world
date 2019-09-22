@@ -13,13 +13,15 @@ https://hub.docker.com/r/treetips/schemaspy-mysql/
 ##### Dockerfile
 * compose_up.sh copy delete
 * LANG env setting delete
-
+* phpDocumentor get method replace
+```
+wget -P app/vendor/bin https://www.phpdoc.org/phpDocumentor.phar
+ln -s phpDocumentor.phar phpdoc
+```
 
 ##### compose_up.sh
 ```
-#!/bin/bash
-
-set -eu
+set -eux
 
 cp -v
 ```
