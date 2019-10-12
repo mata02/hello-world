@@ -3,7 +3,7 @@ DROP SCHEMA IF EXISTS ysap CASCADE;
 CREATE SCHEMA AUTHORIZATION ysap;
 
 -- カレントスキーマ変更
-SET search_path to ysap,public,topology;
+SET search_path TO ysap,public,topology;
 
 -- マクロ修正
 -- DROP TABLE name;
