@@ -7,4 +7,4 @@ SET search_path TO ysap,public,topology;
 
 -- マクロ修正
 -- DROP TABLE name;
-DROP TABLE IF EXISTS name CASCADE;
+DROP TABLE IF EXISTS name;
