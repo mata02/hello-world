@@ -1,5 +1,7 @@
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    $('#elem').waitMe({})
-  });
+$("body").waitMe({});
+
+window.addEventListener("load",function(){
+  $("body").waitMe("hide");.
+},false);
 </script>
