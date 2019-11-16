@@ -5,7 +5,7 @@ window.addEventListener('load', function(event) {
     console.log("All resources finished loading!");
 }, false);
 /*
-* 名称変更menu_content、menu_list
+* 名称変更navbar_content,menu_content,menu_list
 * inlineスタイルはそのまま
 * toggle設定はhideWaitMe()の直前（ctpは削除）
 * Globalize.culture設定はそのままイベント登録しない
