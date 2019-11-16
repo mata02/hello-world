@@ -10,6 +10,5 @@ window.addEventListener('load', function(event) {
 * toggle設定はhideWaitMe()の直前（ctpは削除）
 * Globalize.culture設定はそのままイベント登録しない
 * メニューリストはctp内で取得（Controller内での設定は削除）
-* ログインユーザ名は<h5 class="dropdown-header">Dropdown header</h5>
 * メッセージ定義ファイルの同期確認
 */
