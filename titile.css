@@ -1,7 +1,7 @@
 h1 {
   position: relative;
   padding: .25em 0 .5em .75em;
-  border-left: 6px solid #414a4c;
+  border-left: 6px solid #a22041;
 }
 h1::after {
   position: absolute;
