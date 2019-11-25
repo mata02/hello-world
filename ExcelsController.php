@@ -29,6 +29,9 @@ class ExcelsController extends AppController
      */
     public function print()
     {
+        // Excelコンポーネントのインスタンスを生成
+        $this->loadComponent('Excel');
+
         // スプレッドシートを作成
         $spreadsheet = new Spreadsheet();
 
@@ -77,24 +80,7 @@ class ExcelsController extends AppController
         ];
         $sheet->fromArray($dataList, NULL, 'C6', true);
 
-        // バッファをクリア
-        ob_end_clean();
-
-        $fileName = "sample.xlsx";
-
-        // コールバックをストリーム化
-        $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
-        $stream = new CallbackStream(function () use ($writer) {
-            $writer->save('php://output');
-        });
-
-        // ストリームを出力
-        $response = $this->response
-            ->withHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-            ->withHeader('Content-Disposition', 'attachment;filename="'.$fileName.'"')
-            ->withHeader('Cache-Control', 'max-age=0')
-            ->withBody($stream);
-
-        return $response;
+        // Excelコンポーネントでダウンロード出力
+        return $this->Excel->download('sample.xlsx', $spreadsheet);
     }
 }
