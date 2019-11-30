@@ -1,8 +1,8 @@
 ＜?php /* コメント */ ?＞
 
-this->Html->tag('html', null, ['lang' => 'ja'])
+this->Html->tag('html', null, ['lang' => 'ja']);
 
-private function getTemporaryPassword ($length = 8)
+private function getTemporaryPassword($length = 8)
 {
     return substr(bin2hex(random_bytes($length)), 0, $length);
 }
