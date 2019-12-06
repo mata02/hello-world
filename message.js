@@ -1,3 +1,5 @@
-$(".modal-body").load("/not-here.php", "modal", function(response, status, xhr) {
-  $(container).waitMe("hide");
+$('#container').waitMe();
+$('.modal-body').load('/not-here.php', 'modal', function(response, status, xhr) {
+  $('#addnewWindow').modal('show');
+  $('#container').waitMe("hide");
 });
