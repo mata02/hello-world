@@ -1,5 +1,3 @@
-$('div').load('list.html', function(data, status) {  
-  if(status === 'success') { 
-    $(container).waitMe("hide");
-   }  
+$(".modal-body").load("/not-here.php", "modal", function(response, status, xhr) {
+  $(container).waitMe("hide");
 });
