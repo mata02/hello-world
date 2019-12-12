@@ -19,7 +19,7 @@ use Cake\Validation\Validation
      */
     public static function phone($check)
     {
-        return Validation::custom($check, '/^[0-9\+][0-9-]+[0-9]$/');
+        return Validation::custom($check, '/^([0-9][0-9-]|\+[0-9])[0-9-]+[0-9]$/');
     }
 
 postal('A00-1234');
@@ -29,6 +29,7 @@ postal('123-4567');
 postal('1234567');
 
 phone('-819012345678');
+phone('+-19012345678');
 phone('a123456789');
 phone('012345678z');
 
