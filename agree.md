@@ -9,7 +9,7 @@
   * 存在しないor同意日<=改定日の場合は、利用規約表示CB:OFF(js)
   * 存在するand同意日>改定日の場合は、利用規約非表示CB:ON(js)
 * submit時にCookie書き込み(js)
-
+```php
 if (Browser !== "Chrome") {
   if (Browser !== "Safari") {
     // NG other
@@ -28,3 +28,4 @@ Browser="Safari"
 Browser="Chrome"
 Platform="iOS"
 Platform="ipadOS"
+```
