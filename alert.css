@@ -1,1 +1,10 @@
 .alert {display:inline-block;}
+
+<html>
+<body>
+<div id="box9" style="position: absolute; right :0">
+<div id="box9-1" style="background : red; width: 100px; height: 100px; position: relative;">box9-1</div>
+<div id="box9-1" style="background : green;width: 100px; height: 100px; position: relative;">box9-2</div>
+</div>
+<body>
+</html>
