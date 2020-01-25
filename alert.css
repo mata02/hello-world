@@ -1,10 +1,26 @@
-.alert {display:inline-block;}
-
 <html>
 <body>
+<style>
+.alert {display:inline-block;}
+</style>
+
 <div id="box9" style="position: absolute; right :0">
-<div id="box9-1" style="background : red; width: 100px; height: 100px; position: relative;">box9-1</div>
-<div id="box9-1" style="background : green;width: 100px; height: 100px; position: relative;">box9-2</div>
+  <div id="box9-1" style="background : red; width: 100px; height: 100px; position: relative;">box9-1</div>
+  <div id="box9-1" style="background : green;width: 100px; height: 100px; position: relative;">box9-2</div>
 </div>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert" data-alert-index="0">
+  Alert warning message.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+let alertIndex = 0;
+$(function() {
+	$('div').data('alert-index');
+	$('div[data-alert-index="0"]').alert('close');
+	alertIndex++;
+});
 <body>
 </html>
