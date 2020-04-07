@@ -1,0 +1,5 @@
+8+ characters,including lowercase letters and numbers.
+英小文字、数字を含めた8文字以上を設定してください。
+
+Password must contain at least 8 characters, including lowercase letters and numbers.
+パスワードは英小文字、数字を含めた8文字以上を入力してください。
