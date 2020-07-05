@@ -4,6 +4,6 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "string-quotes": "single",
+    "string-quotes": "single"
   }
 }
