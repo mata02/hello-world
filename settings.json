@@ -9,5 +9,5 @@
 "intelephense.format.enable": false,
 "javascript.format.enable": false,
 "css.validate": false,
-"scss.validate": false,
 "less.validate": false,
+"scss.validate": false,
