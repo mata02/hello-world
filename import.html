@@ -1,3 +1,4 @@
-$('#jqxgrid').jqxGrid('clearselection');
-
-<button id="modalCancelBtn" type="button" class="btn btn-sm btn-outline-secondary">キャンセル</button>
+SELECT ST_AsEncodedPolyline(ST_MakeLine(geom ORDER BY gps_time)) As encodedFlightPath
+FROM flight_record_detail As frd
+WHERE flight_record_id = $1
+GROUP BY flight_record_id;
