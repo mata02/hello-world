@@ -1,4 +1,4 @@
-SELECT ST_AsEncodedPolyline(ST_MakeLine(geom ORDER BY gps_time)) As encodedFlightPath
+SELECT ST_AsEncodedPolyline(ST_MakeLine(position ORDER BY gps_time)) As encodedFlightPath
 FROM flight_record_detail As frd
 WHERE flight_record_id = $1
 GROUP BY flight_record_id;
