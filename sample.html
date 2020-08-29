@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang='ja'>
+
+<head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <!-- ol-ext -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Viglino/ol-ext/master/dist/ol-ext.min.css" />
+    <script type="text/javascript" src="https://cdn.rawgit.com/Viglino/ol-ext/master/dist/ol-ext.min.js"></script>
+    <style>
+        #map {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map" class="map"></div>
+    <label for="speed">再生速度:&nbsp;
+        <input id="speed" type="range" min="99" max="999" step="100" value="199">
+    </label>
+    <button id="start-animation">再生</button>
+</body>
+<script src='sample.js' type='text/javascript'></script>
+</html>
