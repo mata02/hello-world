@@ -17,8 +17,8 @@ function updateUnreadMessageCnt() {
 
 function getUnreadMessageCnt() {
     return $.ajax({
-        type: 'POST',
         timeout: 4000,
+        type: 'POST',
         url: '/ysap/messages/getUnreadMsgCnt',
         headers: {
             'X-CSRF-Token': $('form').find('input[name=_csrfToken]').val()
