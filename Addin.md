@@ -1,1 +1,6 @@
-https://github.com/RelaxTools/RelaxTools-Addin
+* https://github.com/RelaxTools/RelaxTools-Addin
+
+* 「地理データ」→「区画」
+* 「区画」で扱うのは林班、準林班、小班、林小班のみ
+* 計測データサブに［インポート］ボタン、ステータス（未取込、取込中、取込済、エラー）を追加
+
