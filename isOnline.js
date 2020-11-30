@@ -1,4 +1,4 @@
-var radius = Math.max(10, Math.min(size*0.125, 20));
+var radius = Math.max(10, Math.min((size*0.01)+10, 20));
 
 async function isOnline() {
   const date = new Date();
