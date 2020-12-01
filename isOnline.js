@@ -1,4 +1,9 @@
-var radius = Math.max(10, Math.min((size*0.01)+10, 20));
+                createClusterLayer(
+                    clusterFeatures,
+                    '#CC9933',
+                    FEATURES_CLUSTER_LAYER_NAME,
+                    vectorLayer
+                )
 
 async function isOnline() {
   const date = new Date();
