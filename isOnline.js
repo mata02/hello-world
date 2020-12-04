@@ -1,3 +1,7 @@
+everpresentrowplaceholder : '確定 ',
+okstring: 'OK',
+cancelstring: 'キャンセル'
+
 async function isOnline() {
   const date = new Date();
   const timestamp = date.getTime();
