@@ -1,5 +1,5 @@
 https://www.koatech.info/blog/docker-dev-env-nodejs/
-
+https://webpack.js.org/configuration/devtool/#special-cases
 
 async function isOnline() {
   const date = new Date();
