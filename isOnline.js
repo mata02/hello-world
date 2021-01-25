@@ -1,5 +1,17 @@
-https://www.koatech.info/blog/docker-dev-env-nodejs/
-https://webpack.js.org/configuration/devtool/#special-cases
+var result = (function (param1, param2) {
+    return param1 + param2
+}(1, 2))
+console.log(result)
+
+const locale = (async function (lang) {
+  if (lang !== 'en') {
+    const { jqx } =  await import(`../../assets/locales/jqx.${lang}`)
+    return jqx
+  } else {
+    return {}
+  }
+}(process.env.APP_LANG))
+console.log(locale)
 
 async function isOnline() {
   const date = new Date();
