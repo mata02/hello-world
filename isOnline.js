@@ -1,5 +1,3 @@
-https://stackoverflow.com/questions/55907725/nuxt-not-adding-bodyattr-on-refresh-ssr
-
 async function isOnline() {
   const date = new Date();
   const timestamp = date.getTime();
