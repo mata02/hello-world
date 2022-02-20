@@ -1,2 +1,0 @@
-/** The WKT regular expression. */
-public static final String WKT_REGEX = "((((MULTI)?(POINT|LINESTRING|POLYGON)|GEOMETRYCOLLECTION)Z?M?)[\\s]*[(].*[)])";
