@@ -1,3 +1,39 @@
+// BModal 
+//  Properties 
+//   scrollable: true
+
+// Dropdown
+//  ユーザー名、ログアウトに区切り線を追加
+//  <b-dropdown-divider></b-dropdown-divider>
+
+// TagSelect
+//  CSS class
+//   .badge-select {
+//     color: #212529;
+//     background-color: #ced4da; 
+//   }
+
+// BSidebar 
+//  Properties 
+//   no-header: true
+//   right: true
+//   shadow :'sm'
+//   bg-variant: 'white'
+//  CSS class
+//   .sidebar-right-collapse {
+//     position: absolute;top:50vh;left:-36px
+//   }
+
+// Form Checkbox
+// 選択肢が2～4個以内の場合に使用、5個以上はSelect（複数）を使用
+// Grouped button style checkboxesを使用
+// BFormCheckboxGroup 
+//  Properties 
+//   size: 'sm'
+//   buttons: true
+//   button-variant: 'outline-success'
+// Form Radio
+// 選択肢が4個以内の場合に使用、5個以上はSelect（単一）を使用
 <template>
   <div>
     <b-button v-b-toggle.sidebar-footer>Toggle Sidebar</b-button>
