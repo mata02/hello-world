@@ -23,6 +23,8 @@ const string DateTimeInterface::ATOM = "Y-m-d\TH:i:sP";
 * title sample
 * vehicle no db validate 
 
+# user-pool
+* no secret is not editable(website,custom:webapi)
 # resend
 * falsh.success()
 
