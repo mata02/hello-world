@@ -10,10 +10,21 @@ $users = DB::table('users')
                 ->get();
 ```
 
+* DateTimeパラメータはPHPのDateTimeInterface::ATOM形式で送信
+```javascript
+dayjs().format('YYYY-MM-DDTHH:mm:ssZ') 
+```
+```php
+const string DateTimeInterface::ATOM = "Y-m-d\TH:i:sP";
+```
+
 # DL
 * dowload modal sample
 * title sample
-* vehicle no validate 
+* vehicle no db validate 
+
+# resend
+* falsh.success()
 
 # front
 * https://jun-app.com/articles/nuxt-auth-middleware
