@@ -9,5 +9,6 @@
 
 
 # front
+* https://qiita.com/_masa_u/items/b58b92c283f4e770e094
 * https://jun-app.com/articles/nuxt-auth-middleware
 * https://reffect.co.jp/vue/nuxt-js-auth-setting-with-backend
