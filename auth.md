@@ -12,6 +12,11 @@
 * https://qiita.com/_masa_u/items/b58b92c283f4e770e094
 * https://zenn.dev/kokota/articles/3eaf6de2a22e29
 
+```scss
+$success: #0d6efd;
+$info: #0dcaf0;
+$dark: #212529;
+```
 ##
 * https://jun-app.com/articles/nuxt-auth-middleware
 * https://reffect.co.jp/vue/nuxt-js-auth-setting-with-backend
