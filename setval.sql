@@ -9,3 +9,5 @@ if (Schema::hasTable('bk1_mobile_app_packages')) {
 Schema::table('mobile_app_packages', function (Blueprint $table) {
     $table->renameColumn('app_type', 'app_type_id');
 });
+
+[あとで][お知らせの確認]
