@@ -12,3 +12,14 @@ Schema::table('mobile_app_packages', function (Blueprint $table) {
 
 ［後で確認］［お知らせの確認］
 [Later][View announcements]
+
+
+body.auth-body {
+    min-height: 100vh;
+    background-color: var(--light);
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    justify-content: center;
+}
