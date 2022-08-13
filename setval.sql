@@ -11,4 +11,4 @@ Schema::table('mobile_app_packages', function (Blueprint $table) {
 });
 
 ［後で確認］［お知らせの確認］
-
+[Later][View announcements]
