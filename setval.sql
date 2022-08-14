@@ -10,9 +10,10 @@ Schema::table('mobile_app_packages', function (Blueprint $table) {
     $table->renameColumn('app_type', 'app_type_id');
 });
 
-［後で確認］［お知らせの確認］
-[Later][View announcements]
 
+
+Confirm later: Later: 後で確認
+View announcements: View announcements: お知らせの確認
 
 body.auth-body {
     min-height: 100vh;
@@ -23,3 +24,5 @@ body.auth-body {
     align-items: center;
     justify-content: center;
 }
+
+画面表示時のFocus設定しない
