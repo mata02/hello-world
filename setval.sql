@@ -10,7 +10,7 @@ Schema::table('mobile_app_packages', function (Blueprint $table) {
     $table->renameColumn('app_type', 'app_type_id');
 });
 
-Confirm later: Confirm later: 後で確認
+Ask me later: Ask me later: 後で確認
 View announcements: View announcements: お知らせの確認
 
 body.auth-body {
