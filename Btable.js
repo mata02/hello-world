@@ -1,0 +1,2 @@
+responsive: true
+stickyHeader: true
