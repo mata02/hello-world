@@ -1,5 +1,6 @@
-# splitpanes
-:dbl-click-splitter="false"
+# table
+* attribute JSON -> JSONB
+* remove flight_record.user_id
 
-# total time
-* prop & computed
+# model
+* cast json attribute -> array
