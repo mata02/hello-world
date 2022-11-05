@@ -1,15 +1,8 @@
-# table
-* attribute JSON -> JSONB
-* remove flight_record.user_id
-
-# model
-* cast json attribute -> array
-
-# backend
-* system parameter seeder
-* 検索結果が{0}件を超えました。検索条件を変更して、再度検索を行ってください。
-* Search results exceeded {0}. Please change the conditions and search again.
-
-# frontend
-* ol-ext 4.0.3
-
+# play icon
+* table col
+```vue
+    <b-icon icon="play-btn" variant="secondary"></b-icon>
+    <b-icon icon="play-btn-fill" variant="primary"></b-icon>
+    <b-icon icon="stop-btn-fill" variant="success" animation="fade"></b-icon>
+```
+* point use feature fill-color
