@@ -7,3 +7,6 @@ play:     stop-btn
 ```
 * use featurestyle.fill_color for animation point style
 * layer clear at search event
+
+# ol plugin
+* add ol_featureAnimation_Path
