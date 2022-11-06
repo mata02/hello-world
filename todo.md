@@ -10,3 +10,6 @@ play:     stop-btn
 
 # ol plugin
 * add ol_featureAnimation_Path
+* speed min=0.2 max=3.2 step=0.2
+* Add animationstart event -> icon stop & disable speed
+* Add animationend event -> icon play & enable speed 
