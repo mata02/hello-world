@@ -1,4 +1,4 @@
-"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+"postCreateCommand": "./.devcontainer/post-create-command.sh",
 
 post-create-command.sh
 
