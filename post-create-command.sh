@@ -1,6 +1,6 @@
 "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
 
-postCreateCommand.sh
+post-create-command.sh
 
 apt-get update && \
 apt-get install -y git openssh-client
