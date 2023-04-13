@@ -21,7 +21,30 @@ class CollectionHelper
             'path' => Paginator::resolveCurrentPath(),
             'pageName' => 'page',
         ]);
+    }
 
+    /**
+     * Paginate the given query into a simple paginator.
+     *
+     * @param  Collection  $collection
+     * @param  int  $perPage
+     * @param  array  $columns
+     * @param  string  $pageName
+     * @param  int|null  $page
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function paginate(Collection $collection, $perPage = 15, $columns = ['*'], $pageName = 'page', $page = null)
+    {
+        $page = $page ?: Paginator::resolveCurrentPage($pageName);
+
+        $total = $results->count();
+
+        $results = $total ? $collection->forPage($page, $perPage)->get($columns) : collect();
+
+        return $this->paginator($results, $total, $perPage, $page, [
+            'path' => Paginator::resolveCurrentPath(),
+            'pageName' => $pageName,
+        ]);
     }
 
     /**
@@ -34,7 +57,7 @@ class CollectionHelper
      * @param  array  $options
      * @return \Illuminate\Pagination\LengthAwarePaginator
      */
-    protected static function paginator($items, $total, $perPage, $currentPage, $options)
+    private static function paginator($items, $total, $perPage, $currentPage, $options)
     {
         return Container::getInstance()->makeWith(LengthAwarePaginator::class, compact(
             'items', 'total', 'perPage', 'currentPage', 'options'
