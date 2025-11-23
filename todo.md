@@ -1,4 +1,4 @@
-* 国一覧取得の抽出条件（廃止日>today）
+* 国一覧取得の抽出条件（廃止日 IS NULL OR 廃止日>today）
 * ユーザーマスタ.使用国IDの廃止（id tokenを使用）
 * GETパラメーターはqueryで指定
 ```typescript
