@@ -1,3 +1,5 @@
+* 国一覧取得の抽出条件（廃止日>today）
+* ユーザーマスタ.使用国IDの廃止（id tokenを使用）
 * GETパラメーターはqueryで指定
 ```typescript
 const param1 = ref('value1')
