@@ -2,12 +2,10 @@
 export default defineNuxtConfig({
   nitro: {
     routeRules: {
-      // /_nuxt/配下の全ファイルに対してヘッダーを削除
-      '/_nuxt/**': {
-        headers: {
-          'Set-Cookie': '', // Set-Cookieヘッダーを空にして削除
-        },
-      },
+      '/_nuxt/**': { headers: { 'Set-Cookie': '' } },
+      '/_ipx/**': { headers: { 'Set-Cookie': '' } },
+      '/_i18n/**': { headers: { 'Set-Cookie': '' } },
+      '/_fonts/**': { headers: { 'Set-Cookie': '' } },
     },
   },
 })
