@@ -1,3 +1,4 @@
+// https://playwright.dev/docs/auth#basic-shared-account-in-all-tests
 // tests/auth.setup.ts
 import { test as setup } from '@playwright/test'
 
