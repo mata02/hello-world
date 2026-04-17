@@ -1,7 +1,7 @@
 import time
 from pathlib import Path
 
-def delete_old_files(target_dir, days=1):
+def rm_old_files(target_dir, days=1):
     # 現在時刻（秒）を取得
     now = time.time()
     # 指定日数を秒に変換
@@ -24,4 +24,4 @@ def delete_old_files(target_dir, days=1):
                     print(f"Failed to delete {path}: {e}")
 
 # 実行（削除したいディレクトリのパスを指定）
-delete_old_files("path/to/your/directory")
+rm_old_files("path/to/your/directory")
