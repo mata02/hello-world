@@ -1,6 +1,6 @@
 import os
 
-def remove_empty_folders(path):
+def rm_empty_folders(path):
     # topdown=Falseで深い階層から順に処理
     for dirpath, dirnames, filenames in os.walk(path, topdown=False):
         # サブフォルダが空、かつファイルも存在しない場合
@@ -10,4 +10,4 @@ def remove_empty_folders(path):
             except OSError as e:
                 print(f"削除失敗: {dirpath} ({e})")
 
-# remove_empty_folders('./target_folder')
+rm_empty_folders('./target_folder')
