@@ -1,6 +1,11 @@
 import os
+from pathlib import Path
 
 def rm_empty_folders(path):
+    path = Path(path)
+    if not path.exists():
+        return 
+
     # topdown=Falseで深い階層から順に処理
     for dirpath, dirnames, filenames in os.walk(path, topdown=False):
         # サブフォルダが空、かつファイルも存在しない場合
