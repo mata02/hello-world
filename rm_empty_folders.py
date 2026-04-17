@@ -1,8 +1,8 @@
 import os
 from pathlib import Path
 
-def rm_empty_folders(path):
-    path = Path(path)
+def rm_empty_folders(target):
+    path = Path(target)
     if not path.exists():
         return 
 
