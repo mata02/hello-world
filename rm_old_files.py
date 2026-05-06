@@ -19,6 +19,7 @@ def rm_old_files(target, days=1):
             if now - fp.stat().st_mtime > threshold:
                 try:
                     fp.unlink()
+                    print(f"Deleted: {fp}")
                 except Exception as e:
                     print(f"Failed to delete {fp}: {e}")
 
