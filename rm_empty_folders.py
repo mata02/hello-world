@@ -12,7 +12,8 @@ def rm_empty_folders(target):
         if not dirnames and not filenames:
             try:
                 os.rmdir(dirpath)
+                print(f"Deleted: {dirpath}")
             except OSError as e:
-                print(f"削除失敗: {dirpath} ({e})")
+                print(f"Failed to delete. {dirpath} ({e})")
 
 rm_empty_folders('./target_folder')
