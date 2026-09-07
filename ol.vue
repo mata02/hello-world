@@ -10,18 +10,30 @@ const mapElement = ref(null)
 onMounted(() => {
   if (!mapElement.value) return
 
-  // 1. GeoTIFF ソースの定義（$fetch.raw を使用）
+  // 1. GeoTIFF ソースの定義（$fetch.raw とエラーハンドリング）
   const geotiffSource = new GeoTIFF({
     sources: [
       {
         url: 'https://example.com',
         loader: async (url, headers, abortSignal) => {
-          // 💡 $fetch.raw により標準の Response オブジェクトをそのまま OpenLayers に渡す
-          const response = await $fetch.raw(url, {
-            headers,
-            signal: abortSignal,
-          })
-          return response
+          try {
+            // $fetch.raw はエラー（4xx, 5xx）のときに例外をスローします
+            const response = await $fetch.raw(url, {
+              headers,
+              signal: abortSignal,
+            })
+            return response
+          } catch (error) {
+            // 💡 最適化: 403 Forbidden エラーを特異的に検知してロギング
+            if (error.response && error.response.status === 403) {
+              console.error(`[GeoTIFF Loader] 403 Forbidden: アクセス権限がありません。URL: ${url}`)
+            } else {
+              console.error('[GeoTIFF Loader] 通信エラー:', error.message || error)
+            }
+            
+            // OpenLayers側にエラーを伝えるため、例外を再スロー（これによりソース状態が 'error' になります）
+            throw error
+          }
         }
       }
     ]
@@ -30,7 +42,7 @@ onMounted(() => {
   // 2. 空のマップを初期化
   const map = new Map({
     target: mapElement.value,
-    layers: [], // 状態が 'ready' になってから追加する
+    layers: [], // 状態が 'ready' になってから追加
     view: new View({
       projection: 'EPSG:3857',
       center:,
@@ -43,7 +55,7 @@ onMounted(() => {
     const state = geotiffSource.getState()
 
     if (state === 'ready') {
-      // 💡 最適化: 重複実行を防ぐため、即座にイベントリスナーを解除
+      // 💡 重複実行を防ぐため、即座にイベントリスナーを解除（メモリリーク防止）
       geotiffSource.un('change', checkSourceState)
 
       try {
@@ -71,9 +83,9 @@ onMounted(() => {
         console.error('GeoTIFF の View 設定中にエラーが発生しました:', error)
       }
     } else if (state === 'error') {
-      // エラー時もリスナーを解除し、適切にハンドリング
+      // エラー時もリスナーを解除し、サイレントクラッシュを防ぐ
       geotiffSource.un('change', checkSourceState)
-      console.error('GeoTIFF ソースがエラー状態（error）になりました。URL、CORS、または認証ヘッダーを確認してください。')
+      console.error('[GeoTIFF Source] ソースがエラー状態（error）に遷移しました。')
     }
   }
 
