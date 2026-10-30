@@ -1,17 +1,20 @@
 // plugins/geotiff.ts
 import { fromUrl } from 'geotiff'
 
-// 1. NuxtApp と Vue インスタンスへ型を拡張
-//   「$geotiffFromUrl」という名前で登録する例
+// 1. $geotiff.fromUrl という構造に合わせて型定義を拡張
 declare module '#app' {
   interface NuxtApp {
-    $geotiffFromUrl: typeof fromUrl
+    $geotiff: {
+      fromUrl: typeof fromUrl
+    }
   }
 }
 
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $geotiffFromUrl: typeof fromUrl
+    $geotiff: {
+      fromUrl: typeof fromUrl
+    }
   }
 }
 
@@ -22,8 +25,10 @@ export default defineNuxtPlugin({
   setup() {
     return {
       provide: {
-        // fromUrl 関数だけを provide
-        geotiffFromUrl: fromUrl
+        // geotiff というオブジェクトの中に fromUrl を含める
+        geotiff: {
+          fromUrl
+        }
       }
     }
   }
